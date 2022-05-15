@@ -5,15 +5,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const TeacherAPI = require('./Routes/Teacher/route.teacher');
 const ProfileAPI = require('./Routes/Teacher/route.tprofile');
-const MaterialAPI = require('./Routes/Teacher/route.material');
-const studentPaymentRoute = require('./Routes/Accountant/route.student.payment');
-const companyPaymentRoute = require('./Routes/Accountant/route.company.payment');
-const teacherTaskRoute = require('./Routes/Class/route.class');
-
-//R.K Added:-
-const studentNoticesRoute = require('./Routes/Student/route.studentNotices');
-const studentFeedBackRoute = require('./Routes/Student/route.feedback');
-const MainStudentRoute = require('./Routes/Student/route.student');
+const MaterialAPI = require('./Routes/Teacher/route.material');;
 
 
 dotenv.config();
@@ -48,7 +40,6 @@ mongoose.connect(MONGODB_URI, {
 
 mongoose.connection.once('open', () => {
     console.log('Database Connected...');
-    initial();
     console.log('######################################################');
 });
 
@@ -67,14 +58,6 @@ if(process.env.NODE_ENV === 'production'){
 app.use('/teacher', TeacherAPI());
 app.use('/profile', ProfileAPI());
 app.use('/material', MaterialAPI());
-app.use('/student-payment', studentPaymentRoute());
-app.use('/company-payment', companyPaymentRoute());
-app.use('/teacher-task', teacherTaskRoute());
-
-//R.K Added:-
-app.use('/StudentNotices', studentNoticesRoute());
-app.use('/StudentFeedbacks', studentFeedBackRoute());
-app.use('/MainStudent', MainStudentRoute());
 
 app.listen(PORT, () => {
     console.log('######################################################');
