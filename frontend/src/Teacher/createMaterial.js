@@ -157,7 +157,7 @@ class CreateMaterial extends Component {
                             </div>
 
                             <div className="col-12">
-                                <button className="button-purple button2-purple">Submit</button>
+                                <button className="button-purple button2-purple">Add to List</button>
                             </div>
                         </form>
                         </div>
