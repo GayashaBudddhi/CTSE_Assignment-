@@ -19,7 +19,7 @@ class supervisorDashboard extends Component {
                 <div className="row row-cols-1 p-4 row-cols-md-4 g-4"><br/>
 
                 <div className="col">
-                        <a href="/teacher/view-lesson-materials">
+                        <a href="/teacher/add-course-materials">
                             <div className="card-d shadow p-3 rounded">
                                 <h5>Add new Product</h5>
                                 <div className="d-grid gap-2 d-md-flex justify-content-md-end">

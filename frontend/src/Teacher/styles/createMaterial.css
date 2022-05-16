@@ -134,3 +134,15 @@ p3 {
     text-transform: capitalize;
     text-align: center;
 }
+
+.button-purple button2-purple {
+    background-color: Transparent;
+    color: #267808;
+    font-weight: bold;
+    border: 2px solid #267808;
+}
+
+.button2-green:hover {
+    background-color: #267808;
+    color: white;
+}

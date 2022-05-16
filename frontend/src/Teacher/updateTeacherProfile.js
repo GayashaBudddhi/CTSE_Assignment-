@@ -122,8 +122,9 @@ class UpdateTeacherProfile extends Component{
     render() {
         return (
             <div className="background">
-                <img src={my}/>
+              
                 <div className="container mt-4 shadow p-3 mb-5 bg-body rounded">
+                <img src={my}/>
                     <div>
                         <p3>UPDATE PROFILE</p3>
                         <br/><br/><br/><br/>
@@ -131,7 +132,7 @@ class UpdateTeacherProfile extends Component{
                             <form onSubmit={this.onSubmit}
                                   className="row g-3">
                                 <div className="col-md-6">
-                                    <label htmlFor="registrationNumber" className="form-label">Employee Registration Number</label>
+                                    <label htmlFor="registrationNumber" className="form-label">EmployeeRegistration Number</label>
                                     <div className="input-group mb-3">
                                         <span className="input-group-text"><i className="fa fa-calendar"></i></span>
                                         <input

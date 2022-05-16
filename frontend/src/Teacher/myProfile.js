@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from "axios";
 import './styles/teacherProfile.css';
 import my from "../Teacher/image/download.jpg";
+import './styles/button.css'
 
 class MyProfile extends Component{
     constructor(props) {
@@ -114,7 +115,7 @@ class MyProfile extends Component{
     render() {
         return (
             <div className="background">
-                <img src={my}/>
+              
                 <div className="container mt-4 shadow p-3 mb-5 bg-body rounded">
                     <div>
                         <p3>UPDATE PROFILE</p3>
