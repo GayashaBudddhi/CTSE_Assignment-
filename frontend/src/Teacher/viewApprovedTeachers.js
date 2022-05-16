@@ -7,14 +7,14 @@ class ViewApprovedTeachers extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            teacher: [],
+            material: [],
             isExpandClick: false
         }
     }
 
     //To call the end point and get the values using axios
     componentDidMount() {
-        axios.get('http://localhost:8081/teacher/')
+        axios.get('http://localhost:8081/material/')
             .then(response => {
                 this.setState({teacher: response.data.data})
             } )
@@ -22,7 +22,7 @@ class ViewApprovedTeachers extends Component {
 
     //to call the end point and delete a value using axios
     deleteTeacher(e, id){
-        axios.delete(`http://localhost:8081/teacher/delete/${id}`)
+        axios.delete(`http://localhost:8081/material/delete/${id}`)
             .then(response => {
                 alert('Are you sure you want to delete this registration ?')
                 this.componentDidMount()
@@ -31,7 +31,7 @@ class ViewApprovedTeachers extends Component {
 
     updateStatus(e, id){
         const status = prompt("Enter the status: ");
-        axios.put(`http://localhost:8081/teacher/update/${id}`, {status: status, id:id})
+        axios.put(`http://localhost:8081/material/update/${id}`, {status: status, id:id})
             .then(response => {
                 alert('Registration Status Changed to Pending')
                 this.componentDidMount()
@@ -44,39 +44,31 @@ class ViewApprovedTeachers extends Component {
                 <div className="card shadow p-3 mb-4 bg-body rounded">
                     <div className="search-wrapper">
                         <div className="p-3">
-                            <p3>PERMANENT TEACHERS</p3>
+                            <p3>APPROVED PRODUCTS</p3>
                             <br/><br/>
                             <header className="jumbotron">
                                 <div className="table-responsive">
                                     <table className="table table-striped table-hover">
                                         <thead>
                                         <tr>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Gender</th>
-                                            <th>NIC</th>
-                                            <th>Address</th>
-                                            <th>Contact Number</th>
-                                            <th>Email</th>
-                                            <th>Registered Date</th>
-                                            <th>Current Status</th>
-                                            <th>Update</th>
-                                            <th>Delete</th>
+                                        <th>PRODUCT CATEGORY</th>
+                                            <th>PRODUCT CODE</th>
+                                            <th>PRODUCT COUNT</th>
+                                            <th>DESCRIPTION</th>
+                                            <th>CURRENT STATUS</th>
+                                            <th>UPDATE</th>
+                                            <th>REMOVE</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        {this.state.teacher.length > 0 && this.state.teacher.map((item,index) => (
+                                        {this.state.material.length > 0 && this.state.material.map((item,index) => (
                                             <tr key={index} className="align-top">
                                                 {item.status === "approved" &&
                                                 <>
-                                                    <td>{item.firstName}</td>
-                                                    <td>{item.lastName}</td>
-                                                    <td>{item.gender}</td>
-                                                    <td>{item.nic}</td>
-                                                    <td>{item.address}</td>
-                                                    <td>{item.contactNumber}</td>
-                                                    <td>{item.email}</td>
-                                                    <td>{item.regDate}</td>
+                                                    <td>{item.subjectName}</td>
+                                                <td>{item.subjectCode}</td>
+                                                <td>{item.lesson}</td>
+                                                <td>{item.description}</td>
                                                     <td><span className="badge bg-success">{item.status}</span></td>
                                                     <td>
                                                         <button className="btn btn-outline-warning me-md-2"

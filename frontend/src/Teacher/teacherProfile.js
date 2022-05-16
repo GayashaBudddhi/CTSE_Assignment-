@@ -74,7 +74,7 @@ class TeacherProfile extends Component {
                         <form onSubmit={this.onSubmit}
                               className="row g-3">
                             <div className="col-md-6">
-                                <label htmlFor="registrationNumber" className="form-label">Registration Number</label>
+                                <label htmlFor="registrationNumber" className="form-label">Employee Registration Number</label>
                                 <div className="input-group mb-3">
                                     <span className="input-group-text"><i className="fa fa-calendar"></i></span>
                                     <input

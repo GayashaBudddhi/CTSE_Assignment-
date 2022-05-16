@@ -38,7 +38,7 @@ class UpdatedProfile extends Component {
                                         <dt className="col-sm-7">
                                             <div className="row">
                                                 <div className="row">
-                                                    <dt className="col-sm-4">Registration Number</dt>
+                                                    <dt className="col-sm-4">Employee Registration Number</dt>
                                                     <dd className="col-sm-8">{item.registrationNumber}</dd>
                                                 </div>
                                                 <div className="row">

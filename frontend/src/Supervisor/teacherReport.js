@@ -12,7 +12,7 @@ class TeacherReport extends Component {
 
     //to call the end point and get the values using axios
     componentDidMount() {
-        axios.get('http://localhost:8081/teacher/')
+        axios.get('http://localhost:8081/material/')
             .then(response => {
                 this.setState({teacher : response.data.data})
             } )
@@ -27,42 +27,42 @@ class TeacherReport extends Component {
                 </tr>
                 </thead>
                 <tbody>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Registered Date</th>
+                <th>Product Category</th>
+                <th>Product Code</th>
+                <th>Items Count</th>
                 {this.state.teacher.length > 0 && this.state.teacher.map((item,index) => (
                     <tr key={index} className="align-top">
                         {item.status === "approved" &&
-                        <td>{item.firstName}</td>
+                        <td>{item.subjectName}</td>
                         }
                         {item.status === "approved" &&
-                        <td>{item.lastName}</td>
+                        <td>{item.subjectCode}</td>
                         }
                         {item.status === "approved" &&
-                        <td>{item.regDate}</td>
+                        <td>{item.lesson}</td>
                         }
                     </tr>
                 ))}
                 </tbody>
                 <thead>
                 <tr>
-                    <th className="mb-3 table-secondary" colspan="3"><span className="text-success">PENDING TEACHERS</span></th>
+                    <th className="mb-3 table-secondary" colspan="3"><span className="text-success">PENDING PRODUCTS</span></th>
                 </tr>
                 </thead>
                 <tbody>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Registered Date</th>
+                <th>Product Category</th>
+                <th>Product Code</th>
+                <th>Items Count</th>
                 {this.state.teacher.length > 0 && this.state.teacher.map((item,index) => (
                     <tr key={index} className="align-top">
                         {item.status === "not approved" &&
-                        <td>{item.firstName}</td>
+                        <td>{item.subjectName}</td>
                         }
                         {item.status === "not approved" &&
-                        <td>{item.lastName}</td>
+                        <td>{item.subjectCode}</td>
                         }
                         {item.status === "not approved" &&
-                        <td>{item.regDate}</td>
+                        <td>{item.lesson}</td>
                         }
                     </tr>
                 ))}
@@ -70,24 +70,24 @@ class TeacherReport extends Component {
                 <thead>
                 <tr>
                     <th className="mb-3 table-secondary" colSpan="3"><span
-                        className="text-success">TOTAL REGISTRATIONS</span></th>
+                        className="text-success">TOTAL ITEMS ADDED</span></th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr class="table-success">
-                    <th><span className="text-dark">No of Registrations</span></th>
-                    <th><span className="text-primary">Permanent</span></th>
+                    <th><span className="text-dark">No of Products</span></th>
+                    <th><span className="text-primary">Approved Items</span></th>
                     <th><span className="text-primary">1</span></th>
                 </tr>
                 <tr className="table-success">
-                    <th><span className="text-dark">No of Registrations</span></th>
-                    <th><span className="text-primary">Pending</span></th>
-                    <th><span className="text-primary">4</span></th>
+                    <th><span className="text-dark">No of Products</span></th>
+                    <th><span className="text-primary">Pending Items</span></th>
+                    <th><span className="text-primary">6</span></th>
                 </tr>
                 <tr className="table-success">
-                    <th><span className="text-dark">Total No of Registrations</span></th>
-                    <th><span className="text-primary">All</span></th>
-                    <th><span className="text-primary">5</span></th>
+                    <th><span className="text-dark">Total No of Products</span></th>
+                    <th><span className="text-primary">All Items</span></th>
+                    <th><span className="text-primary">7</span></th>
                 </tr>
                 </tbody>
             </table>
