@@ -19,10 +19,6 @@ import supervisorDashboard from "../Supervisor/supervisorDashboard";
 
 import NewPDF from "../Supervisor/basePDF";
 import UpdateTeacherProfile from "../Teacher/updateTeacherProfile";
-import teacherTaskUpdate from "../Class/teacherUpdate";
-import teacherTask from "../Class/teacher";
-import teacherTaskList from "../Class/teacherTask";
-import teachertaskteacher from "../Teacher/teacherTask";
 
 import MyProfile from "../Teacher/myProfile";
 import UpdatedProfile from "../Teacher/updatedProfile";
@@ -55,10 +51,6 @@ function PageRoutes() {
                         <Route path="/supervisor/report" component={NewPDF}/>
                         <Route path="/supervisor/" component={supervisorDashboard}/>
 
-                        <Route path="/teacherTaskUpdate/:id" component={teacherTaskUpdate}/>
-                        <Route path="/teacherTask/" component={teacherTask}/>
-                        <Route path="/teacherTaskList/" component={teacherTaskList}/>
-                        <Route path="/teacherTaskListteacher/" component={teachertaskteacher}/>
                     </Switch>
                 </section>
             </Router>
