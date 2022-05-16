@@ -10,14 +10,14 @@ class ViewPendingTeachers extends Component {
         this.state = {
             material: [],
             isExpandClick: false
-        }
+        };
     }
 
     //To call the end point and get the values using axios
     componentDidMount() {
         axios.get('http://localhost:8081/material/')
             .then(response => {
-                this.setState({teacher: response.data.data})
+                this.setState({material: response.data.data})
             } )
     }
 

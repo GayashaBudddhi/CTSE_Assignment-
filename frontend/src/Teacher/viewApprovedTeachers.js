@@ -16,7 +16,7 @@ class ViewApprovedTeachers extends Component {
     componentDidMount() {
         axios.get('http://localhost:8081/material/')
             .then(response => {
-                this.setState({teacher: response.data.data})
+                this.setState({material: response.data.data})
             } )
     }
 

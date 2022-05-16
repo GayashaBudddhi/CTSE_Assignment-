@@ -23,7 +23,7 @@ class TeacherReport extends Component {
             <table className="table table-bordered table-hover">
                 <thead>
                 <tr>
-                    <th className="mb-3 table-secondary" colspan="3"><span className="text-success">PERMANENT PRODUCTS</span></th>
+                    <th className="mb-3 table-secondary" colspan="3"><span className="text-success">APPROVED PRODUCTS</span></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -70,7 +70,7 @@ class TeacherReport extends Component {
                 <thead>
                 <tr>
                     <th className="mb-3 table-secondary" colSpan="3"><span
-                        className="text-success">TOTAL ITEMS ADDED</span></th>
+                        className="text-success">Total Count of Recently Added Products</span></th>
                 </tr>
                 </thead>
                 <tbody>

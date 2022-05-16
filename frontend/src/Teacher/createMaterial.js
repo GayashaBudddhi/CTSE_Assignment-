@@ -77,13 +77,13 @@ class CreateMaterial extends Component {
                                         required
                                     >
                                         <option value="select">- -Select category- -</option>
-                                        <option value="Mathematics">Motherboards</option>
-                                        <option value="English">Cables</option>
-                                        <option value="Sinhala">Mobile & Tablets</option>
-                                        <option value="ICT">Sensors</option>
-                                        <option value="History">Breadboards</option>
-                                        <option value="English Literature">Card Readers</option>
-                                        <option value="Tamil">Raspberry Pi</option>
+                                        <option value="Motherboards">Motherboards</option>
+                                        <option value="Cables">Cables</option>
+                                        <option value="Mobile & Tablets">Mobile & Tablets</option>
+                                        <option value="Sensors">Sensors</option>
+                                        <option value="Breadboards">Breadboards</option>
+                                        <option value="Card Readers">Card Readers</option>
+                                        <option value="Raspberry Pi">Raspberry Pi</option>
                                     </select>
                                 </div>
                             </div>
