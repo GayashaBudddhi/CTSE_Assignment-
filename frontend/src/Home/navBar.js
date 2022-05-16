@@ -4,7 +4,18 @@ import "./styles/navBar.css";
 
 import img1 from "../components/images/text.gif";
 
-const Navbar = () => {
+const Navbar = () =>{
+  const history = useHistory();
+  const location = useLocation();
+
+const isActive = (history, path) => {
+  if(history.location.pathname === path){
+      return { color: "#ffffff"}
+  } else {
+      return { color: "#887688"}
+  }
+};
+
   return (
     <div data-testid="nav-1 row">
       <nav className="navbar navbar-expand-lg navbar-custom">
@@ -34,125 +45,47 @@ const Navbar = () => {
           </button>
           <div className="nav collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ">
-              <div className="navbar-nav mr-auto">
-                <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    href="/teacher/my/profile"
-                  >
-                    My Profile
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" href="/teacher/registration">
-                    Teacher Registration
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    href="/teacher/complete-registration"
-                  >
-                    Registration Status
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    href="/teacher/add-course-materials"
-                  >
-                    Upload Lessons
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    href="/teacher/view-approved-materials"
-                  >
-                    Lesson Upload Status
-                  </Link>
-                </li>
 
+              <div className="navbar-nav mr-auto">
+                 <li className="nav-item">
+                   <Link className="nav-link" style={isActive(history, '/teacher/my/profile')} to="/teacher/my/profile">My Profile</Link>
+                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    href="/supervisor/"
-                  >
-                    My Dashboard
-                  </Link>
+                <Link className="nav-link" style={isActive(history, '/teacher/registration')} to="/teacher/registration">Teacher Registration</Link>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    href="/teacher/view-registration"
-                  >
-                    Current Registration
-                  </Link>
+                <Link className="nav-link" style={isActive(history, '/teacher/complete-registration')} to="/teacher/complete-registration"> Registration Status</Link>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    href="/supervisor/view-pending-teachers"
-                  >
-                    Pending Teachers
-                  </Link>
+                <Link className="nav-link" style={isActive(history, '/teacher/add-course-materials')} to="/teacher/add-course-materials">Upload Lessons</Link>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    href="/teacher/view-approved-registration"
-                  >
-                    Permanent Teachers
-                  </Link>
+                <Link className="nav-link" style={isActive(history, '/teacher/view-approved-materials')} to="/teacher/view-approved-materials">Lesson Upload Status</Link>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    href="/teacher/profile"
-                  >
-                    New Profile
-                  </Link>
+                <Link className="nav-link" style={isActive(history, '/supervisor/')} to="/supervisor/"> My Dashboard</Link>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    href="/teacher/view-profile"
-                  >
-                    Teacher Profiles
-                  </Link>
+                <Link className="nav-link" style={isActive(history, '/teacher/view-registration')} to="/teacher/view-registration">Current Registration</Link>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    href="/teacher/view-lesson-materials"
-                  >
-                    Lesson Materials
-                  </Link>
+                <Link className="nav-link" style={isActive(history, '/supervisor/view-pending-teachers')} to="/supervisor/view-pending-teachers">Pending Teachers</Link>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    href="/supervisor/report"
-                  >
-                    Registration Summary
-                  </Link>
+                <Link className="nav-link" style={isActive(history, '/teacher/view-approved-registration')} to="/teacher/view-approved-registration">Permanent Teachers</Link>
                 </li>
                 <li className="nav-item">
-            <Link
-              className="nav-link"
-              href="/teacher/registration"
-            >
-              Teacher Registration
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              className="nav-link"
-              href="/teacher/complete-registration"
-            >
-              Registration Status
-            </Link>
-          </li>
+                <Link className="nav-link" style={isActive(history, '/teacher/profile')} to="/teacher/profile">New Profile</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link" style={isActive(history, '/teacher/view-profile')} to="/teacher/view-profile">Teacher Profiles</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link" style={isActive(history, '/teacher/view-lesson-materials')} to="/teacher/view-lesson-materials"> Lesson Materials</Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link" style={isActive(history, '/supervisor/report')} to="/supervisor/report">Registration Summary</Link>
+                </li>
               </div>
             </ul>
           </div>
