@@ -36,15 +36,15 @@ class ViewApprovedMaterials extends Component {
                                         <dt className="col-sm-7">
                                             <div className="row">
                                                 <div className="row">
-                                                    <dt className="col-sm-4">Subject Name</dt>
+                                                    <dt className="col-sm-4">Product Category</dt>
                                                     <dd className="col-sm-8">{item.subjectName}</dd>
                                                 </div>
                                                 <div className="row">
-                                                    <dt className="col-sm-4">Subject Code</dt>
+                                                    <dt className="col-sm-4">Product Code</dt>
                                                     <dd className="col-sm-8">{item.subjectCode}</dd>
                                                 </div>
                                                 <div className="row">
-                                                    <dt className="col-sm-4">Lesson</dt>
+                                                    <dt className="col-sm-4">Product Count</dt>
                                                     <dd className="col-sm-8">{item.lesson}</dd>
                                                 </div>
                                                 <div className="row">

@@ -5,6 +5,23 @@ import HomePage from "../Home/homePage";
 import Navbar from "../Home/navBar";
 import Footer from "../Home/footer";
 
+//Student
+import AddStudentPayment from "../Student/Payments/addStudentPayment";
+import ViewStudentPayments from "../Student/Payments/viewStudentPayments";
+import UpdateStudentPayment from "../Student/Payments/updateStudentPayment";
+import LoadingScreen from "../Student/Payments/style/loadingScreen";
+
+//Manager
+import CompanyTransactionOneAtTime from "../Accountant/companyTransactionOneAtTime";
+import AccountantDashboard from "../Accountant/dashboard";
+import ViewStudentPayment from "../Accountant/viewStudentPayment";
+import AddCompanyPayment from "../Accountant/addTransactions";
+import UpdateCompanyPayment from "../Accountant/updateTransactions";
+import ViewIncomeTransaction from "../Accountant/viewIncomeTransactions";
+import ViewOutcomeTransaction from "../Accountant/viewOutcomeTransaction";
+import AccountantCalender from "../Accountant/calender";
+import ReactPDF from "../Accountant/reportPDF";
+
 //Teacher
 import TeacherRegistration from "../Teacher/teacherRegistration";
 import TeacherProfile from "../Teacher/teacherProfile";
@@ -32,6 +49,20 @@ function PageRoutes() {
                 <section className="content">
                     <Switch>
                         <Route path="/" component={HomePage} exact/>
+                        <Route path="/student/payment/update/:id" component={UpdateStudentPayment}/>
+                        <Route path="/student/add-payment" component={AddStudentPayment}/>
+                        <Route path="/student/payment" component={ViewStudentPayments}/>
+                        <Route path="/alert" component={LoadingScreen}/>
+
+                        <Route path="/accountant/company-payment-incomes/view/:id" component={CompanyTransactionOneAtTime}/>
+                        <Route path="/accountant/company-payment-incomes" component={ViewIncomeTransaction}/>
+                        <Route path="/accountant/company-payment-expenses" component={ViewOutcomeTransaction}/>
+                        <Route path="/accountant/update-payment/:id" component={UpdateCompanyPayment}/>
+                        <Route path="/accountant/add-payment" component={AddCompanyPayment}/>
+                        <Route path="/accountant/student-payment" component={ViewStudentPayment}/>
+                        <Route path="/accountant/calender" component={AccountantCalender}/>
+                        <Route path="/accountant/report" component={ReactPDF}/>
+                        <Route path="/accountant/" component={AccountantDashboard}/>
 
 
                         <Route path="/teacher/my/profile" component={MyProfile}/>

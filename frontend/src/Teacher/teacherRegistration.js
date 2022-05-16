@@ -93,7 +93,7 @@ class TeacherRegistration extends Component {
                 <img src={my}/>
                 <div className="container mt-4 shadow p-3 mb-5 bg-body rounded">
             <div>
-                <p3 data-testid='title-field-new-registration'>TEACHER REGISTRATION</p3>
+                <p3 data-testid='title-field-new-registration'>CREATE NEW ACCOUNT</p3>
                 <br/><br/>
                 <div className="container mt-4 p-3 mb-5 bg-body rounded">
                 <form onSubmit={this.onSubmit}

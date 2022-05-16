@@ -47,44 +47,39 @@ const isActive = (history, path) => {
             <ul className="navbar-nav ">
 
               <div className="navbar-nav mr-auto">
+
+              <li className="nav-item">
+                <Link className="nav-link" style={isActive(history, '/supervisor/')} to="/supervisor/">My Dashboard</Link>
+                </li>
+                
                  <li className="nav-item">
-                   <Link className="nav-link" style={isActive(history, '/teacher/my/profile')} to="/teacher/my/profile">My Profile</Link>
+                <Link className="nav-link" style={isActive(history, '/teacher/profile')} to="/teacher/profile">Create Account</Link>
+                </li>
+
+                <li className="nav-item">
+                   <Link className="nav-link" style={isActive(history, '/teacher/my/profile')} to="/teacher/my/profile">Edit Profile</Link>
                  </li>
+               
                 <li className="nav-item">
-                <Link className="nav-link" style={isActive(history, '/teacher/registration')} to="/teacher/registration">Teacher Registration</Link>
+                <Link className="nav-link" style={isActive(history, '/teacher/add-course-materials')} to="/teacher/add-course-materials">Add New Product</Link>
+                </li>
+
+                <li className="nav-item">
+                <Link className="nav-link" style={isActive(history, '/teacher/view-lesson-materials')} to="/teacher/view-lesson-materials">View Products List</Link>
+                </li>
+
+
+                
+                <li className="nav-item">
+                <Link className="nav-link" style={isActive(history, '/supervisor/view-pending-teachers')} to="/supervisor/view-pending-teachers">Pending Products</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link" style={isActive(history, '/teacher/complete-registration')} to="/teacher/complete-registration"> Registration Status</Link>
+                <Link className="nav-link" style={isActive(history, '/teacher/view-approved-registration')} to="/teacher/view-approved-registration">Approved Products</Link>
                 </li>
+                
+            
                 <li className="nav-item">
-                <Link className="nav-link" style={isActive(history, '/teacher/add-course-materials')} to="/teacher/add-course-materials">Upload Lessons</Link>
-                </li>
-                <li className="nav-item">
-                <Link className="nav-link" style={isActive(history, '/teacher/view-approved-materials')} to="/teacher/view-approved-materials">Lesson Upload Status</Link>
-                </li>
-                <li className="nav-item">
-                <Link className="nav-link" style={isActive(history, '/supervisor/')} to="/supervisor/"> My Dashboard</Link>
-                </li>
-                <li className="nav-item">
-                <Link className="nav-link" style={isActive(history, '/teacher/view-registration')} to="/teacher/view-registration">Current Registration</Link>
-                </li>
-                <li className="nav-item">
-                <Link className="nav-link" style={isActive(history, '/supervisor/view-pending-teachers')} to="/supervisor/view-pending-teachers">Pending Teachers</Link>
-                </li>
-                <li className="nav-item">
-                <Link className="nav-link" style={isActive(history, '/teacher/view-approved-registration')} to="/teacher/view-approved-registration">Permanent Teachers</Link>
-                </li>
-                <li className="nav-item">
-                <Link className="nav-link" style={isActive(history, '/teacher/profile')} to="/teacher/profile">New Profile</Link>
-                </li>
-                <li className="nav-item">
-                <Link className="nav-link" style={isActive(history, '/teacher/view-profile')} to="/teacher/view-profile">Teacher Profiles</Link>
-                </li>
-                <li className="nav-item">
-                <Link className="nav-link" style={isActive(history, '/teacher/view-lesson-materials')} to="/teacher/view-lesson-materials"> Lesson Materials</Link>
-                </li>
-                <li className="nav-item">
-                <Link className="nav-link" style={isActive(history, '/supervisor/report')} to="/supervisor/report">Registration Summary</Link>
+                <Link className="nav-link" style={isActive(history, '/supervisor/report')} to="/supervisor/report">Products Report</Link>
                 </li>
               </div>
             </ul>

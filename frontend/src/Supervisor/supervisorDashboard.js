@@ -17,10 +17,21 @@ class supervisorDashboard extends Component {
                 </div>
                 <h2>D A S H B O A R D</h2>
                 <div className="row row-cols-1 p-4 row-cols-md-4 g-4"><br/>
+
+                <div className="col">
+                        <a href="/teacher/view-lesson-materials">
+                            <div className="card-d shadow p-3 rounded">
+                                <h5>Add new Product</h5>
+                                <div className="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <img src={lesson} height="100px"/>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                     <div className="col">
-                        <a href="/teacher/view-registration">
+                        <a href="/teacher/view-lesson-materials">
                             <div className="card-d shadow p-3 mb-5 rounded">
-                                <h5>Current Registrations</h5>
+                                <h5>All Products</h5>
                                 <div className="d-grid gap-2 d-md-flex justify-content-md-end">
                                     <img src={ViewRegistrations} height="100px"/>
                                 </div>
@@ -30,7 +41,7 @@ class supervisorDashboard extends Component {
                     <div className="col">
                         <a href="/supervisor/view-pending-teachers">
                             <div className="card-d shadow p-3 mb-5 rounded">
-                                <h5>Pending Teachers</h5>
+                                <h5>Pending Products</h5>
                                 <div className="d-grid gap-2 d-md-flex justify-content-md-end">
                                     <img src={pending} height="100px"/>
                                 </div>
@@ -40,7 +51,7 @@ class supervisorDashboard extends Component {
                     <div className="col">
                         <a href="/teacher/view-approved-registration">
                             <div className="card-d shadow p-3 mb-5 rounded">
-                                <h5>Permanent Teachers</h5>
+                                <h5>Approved Products</h5>
                                 <div className="d-grid gap-2 d-md-flex justify-content-md-end">
                                     <img src={permanent} height="100px"/>
                                 </div>
@@ -50,33 +61,14 @@ class supervisorDashboard extends Component {
                     <div className="col">
                         <a href="/teacher/profile">
                             <div className="card-d shadow p-3 rounded">
-                                <h5>New Profile</h5>
+                                <h5>Create New Profile</h5>
                                 <div className="d-grid gap-2 d-md-flex justify-content-md-end">
                                     <img src={profile} height="100px"/>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div className="col">
-                        <a href="/teacher/view-profile">
-                            <div className="card-d shadow p-3 rounded">
-                                <h5>Teacher Profiles</h5>
-                                <div className="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <img src={pall} height="100px"/>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="col">
-                        <a href="/teacher/view-lesson-materials">
-                            <div className="card-d shadow p-3 rounded">
-                                <h5>Lesson Materials</h5>
-                                <div className="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <img src={lesson} height="100px"/>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                
                     <div className="col">
                         <a href="/supervisor/report">
                             <div className="card-d shadow p-3 rounded">

@@ -57,14 +57,14 @@ class CreateMaterial extends Component {
                 <img src={my}/>
                 <div className="container mt-4 shadow p-3 mb-5 bg-body rounded">
                     <div>
-                        <p3>UPLOAD PRODUCTS</p3>
+                        <p3>ADD NEW PRODUCT</p3>
                         <br/><br/><br/>
                         <div className="container mt-4 p-3 mb-5 bg-body rounded">
                         <form onSubmit={this.onSubmit}
                               className="row g-3">
                             <br/><br/>
                             <div className="col-md-6">
-                                <label htmlFor="subjectName" className="form-label">Subject Name</label>
+                                <label htmlFor="subjectName" className="form-label">Product Category</label>
                                 <div className="input-group mb-3">
                                     <span className="input-group-text"><i className="fa fa-user"></i></span>
                                     <select
@@ -76,19 +76,19 @@ class CreateMaterial extends Component {
                                         onChange={this.onChange}
                                         required
                                     >
-                                        <option value="select">- -Select subject- -</option>
-                                        <option value="Mathematics">Mathematics</option>
-                                        <option value="English">English</option>
-                                        <option value="Sinhala">Sinhala</option>
-                                        <option value="ICT">ICT</option>
-                                        <option value="History">History</option>
-                                        <option value="English Literature">English Literature</option>
-                                        <option value="Tamil">ICT</option>
+                                        <option value="select">- -Select category- -</option>
+                                        <option value="Mathematics">Motherboards</option>
+                                        <option value="English">Cables</option>
+                                        <option value="Sinhala">Mobile & Tablets</option>
+                                        <option value="ICT">Sensors</option>
+                                        <option value="History">Breadboards</option>
+                                        <option value="English Literature">Card Readers</option>
+                                        <option value="Tamil">Raspberry Pi</option>
                                     </select>
                                 </div>
                             </div>
                             <div className="col-md-6">
-                                <label htmlFor="subjectCode" className="form-label">Subject Code</label>
+                                <label htmlFor="subjectCode" className="form-label">Product Code</label>
                                 <div className="input-group mb-3">
                                     <span className="input-group-text"><i className="fa fa-user-plus"></i></span>
                                     <select
@@ -101,18 +101,18 @@ class CreateMaterial extends Component {
                                         required
                                     >
                                         <option value="select">- -Select subject code- -</option>
-                                        <option value="OLMT01">OLMT01</option>
-                                        <option value="OLEN02">OLEN02</option>
-                                        <option value="OLSI03">OLSI04</option>
-                                        <option value="OLIT04">OLIT04</option>
-                                        <option value="OLHI05">OLHI05</option>
-                                        <option value="OLEL06">OLEL06</option>
-                                        <option value="OLTM07">OLTM07</option>
+                                        <option value="OLMT01">MB01</option>
+                                        <option value="OLEN02">CB02</option>
+                                        <option value="OLSI03">MT03</option>
+                                        <option value="OLIT04">SS04</option>
+                                        <option value="OLHI05">BB05</option>
+                                        <option value="OLEL06">CR06</option>
+                                        <option value="OLTM07">RB07</option>
                                     </select>
                                 </div>
                             </div>
                             <div className="col-md-6">
-                                <label htmlFor="lesson" className="form-label">Lesson</label>
+                                <label htmlFor="lesson" className="form-label">Product Count</label>
                                 <div className="input-group mb-3">
                                     <span className="input-group-text"><i className="fa fa-venus-mars"></i></span>
                                     <input
@@ -143,7 +143,7 @@ class CreateMaterial extends Component {
                             </div>
 
                             <div className="form-group files">
-                                <label>Upload Your File </label>
+                                <label>Upload Image</label>
                             <input
                                             type="file"
                                             className="form-control"
